@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="C02_desconto_escalao"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 03:59:03 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjI4OjAyICI7Mjc2NQ=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjU0OjU4ICI7MTtjZXNhZTtERVNLVE9QLUpTNU1IQzY7MjAyNi0wOC0xMDsiMDM6MDc6MzAgIjs1NzA1"/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjU5OjAzICI7MjsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, desconto, final" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o valor da proposta?&quot;" newline="True"/>
+            <input variable="valor"/>
+            <if expression="valor &gt;= 10000">
+                <then>
+                    <assign variable="desconto" expression="0.15"/>
+                </then>
+                <else>
+                    <if expression="valor &gt;= 5000">
+                        <then>
+                            <assign variable="desconto" expression="0.10"/>
+                        </then>
+                        <else>
+                            <assign variable="desconto" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="final" expression="valor - (valor*desconto)"/>
+            <output expression="&quot;O valor final, j&#225; com desconto, &#233; de &quot; &amp; final &amp; &quot; &#8364;. O seu desconto foi de &quot; &amp; desconto * 100 &amp; &quot;%.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

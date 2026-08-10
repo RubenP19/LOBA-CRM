@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exercicio1.5_FP_LOBA.fprg (mais dificil)"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-04 03:16:19 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMDQ7IjAyOjUwOjI1ICI7Mjc2Nw=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMDQ7IjAzOjE2OjE5ICI7MjsyODgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="orc" type="Real" array="False" size=""/>
+            <declare name="prioridade, interesse" type="String" array="False" size=""/>
+            <output expression="&quot;Or&#231;amento: &quot;" newline="True"/>
+            <input variable="orc"/>
+            <output expression="&quot;Interesse: &quot;" newline="True"/>
+            <input variable="interesse"/>
+            <if expression="orc &gt; 10000 AND interesse = &quot;alto&quot;">
+                <then>
+                    <assign variable="prioridade" expression="&quot;quente&quot;"/>
+                </then>
+                <else>
+                    <if expression="orc &gt; 5000">
+                        <then>
+                            <assign variable="prioridade" expression="&quot;morna&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="orc &gt; 0">
+                                <then>
+                                    <assign variable="prioridade" expression="&quot;fria&quot;"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Dados Inv&#225;lidos&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;A prioridade &#233; &quot; &amp; prioridade" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="03_tempo"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 02:40:43 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjM0OjM0ICI7Mjc2Ng=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjQwOjQzICI7MTsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nseg, seg, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escreve o n&#250;mero de segundos&quot;" newline="True"/>
+            <input variable="nseg"/>
+            <assign variable="min" expression="nseg/60"/>
+            <assign variable="seg" expression="nseg % 60"/>
+            <output expression="&quot;Isto equivale a &quot; &amp; min &amp; &quot; minutos e &quot; &amp; seg &amp; &quot; segundos.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

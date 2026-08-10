@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="C04_prioridade_lead"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 04:11:53 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjA0OjAzOjMzICI7Mjc2Mw=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjA0OjExOjUzICI7MTsyODcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="orc, pont" type="Integer" array="False" size=""/>
+            <declare name="inter" type="String" array="False" size=""/>
+            <output expression="&quot;Qual o or&#231;amento da Lead?&quot;" newline="True"/>
+            <input variable="orc"/>
+            <output expression="&quot;Qual a pontua&#231;&#227;o de interesse da Lead? (0 a 100)&quot;" newline="True"/>
+            <input variable="pont"/>
+            <if expression="orc &gt;= 5000 AND pont &gt;= 70">
+                <then>
+                    <assign variable="inter" expression="&quot;Quente&quot;"/>
+                </then>
+                <else>
+                    <if expression="orc &gt;= 5000 OR pont &gt;= 70">
+                        <then>
+                            <assign variable="inter" expression="&quot;Morno&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="inter" expression="&quot;Frio&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;O interesse do Lead &#233; &quot; &amp; inter &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

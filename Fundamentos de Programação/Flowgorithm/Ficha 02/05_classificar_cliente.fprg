@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="05_classificar_cliente"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 02:52:01 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjQyOjUzICI7Mjc2Ng=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjUyOjAxICI7MTsyODY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="class" type="String" array="False" size=""/>
+            <output expression="&quot;O total gasto do cliente &#233;&quot;" newline="True"/>
+            <input variable="total"/>
+            <if expression="total &gt;= 5000">
+                <then>
+                    <assign variable="class" expression="&quot;Ouro&quot;"/>
+                </then>
+                <else>
+                    <if expression="total &gt;= 1000">
+                        <then>
+                            <assign variable="class" expression="&quot;Prata&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="class" expression="&quot;Bronze&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;O cliente &#233; &quot; &amp; class &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

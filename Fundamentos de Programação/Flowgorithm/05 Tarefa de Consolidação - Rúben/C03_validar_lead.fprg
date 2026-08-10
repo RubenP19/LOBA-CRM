@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="C03_validar_lead"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 04:03:22 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjU5OjEwICI7Mjc2OA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjA0OjAzOjIyICI7MTsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, tel" type="String" array="False" size=""/>
+            <declare name="orc" type="Integer" array="False" size=""/>
+            <output expression="&quot;Qual &#233; o nome da empresa?&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Qual &#233; o contacto da empresa?&quot;" newline="True"/>
+            <input variable="tel"/>
+            <output expression="&quot;Qual o or&#231;amento do lead?&quot;" newline="True"/>
+            <input variable="orc"/>
+            <if expression="nome != &quot;&quot; AND tel != &quot;&quot; AND orc &gt; 0">
+                <then>
+                    <output expression="&quot;Lead V&#225;lido&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Faltam dados obrigat&#243;rios&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

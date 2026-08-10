@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="07_campanha"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 03:18:49 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjU4OjQ4ICI7Mjc3Nw=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjE4OjQ5ICI7MzsyODg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="reg" type="String" array="False" size=""/>
+            <output expression="&quot;Qual a regi&#227;o do cliente?&quot;" newline="True"/>
+            <input variable="reg"/>
+            <if expression="reg = &quot;norte&quot; OR reg = &quot;Norte&quot; OR reg = &quot;centro&quot; OR reg = &quot;Centro&quot;">
+                <then>
+                    <output expression="&quot;Campanha A&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Campanha B&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

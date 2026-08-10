@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="3.1_qualifica&#231;&#227;o lead"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 10:32:05 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjEwOjIxOjIzICI7Mjc1OQ=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjEwOjMyOjA1ICI7MTsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="orc" type="Real" array="False" size=""/>
+            <declare name="interesse" type="String" array="False" size=""/>
+            <output expression="&quot;Qual o or&#231;amento do lead?&quot;" newline="True"/>
+            <input variable="orc"/>
+            <output expression="&quot;Qual o interesse do Lead?&quot;" newline="True"/>
+            <input variable="interesse"/>
+            <if expression="orc &gt;= 10000 AND interesse = &quot;alto&quot;">
+                <then>
+                    <output expression="&quot;A prioridade do lead &#233; Quente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="orc &gt;= 5000">
+                        <then>
+                            <output expression="&quot;A prioridade &#233; Morno&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;A prioridade &#233; Frio&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

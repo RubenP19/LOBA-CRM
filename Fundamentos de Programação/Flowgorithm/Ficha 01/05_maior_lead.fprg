@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="05_maior_lead"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 10:20:21 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjEwOjE2OjE1ICI7Mjc2NA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjEwOjIwOjIxICI7MTsyODY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="orc1, orc2" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o or&#231;amento do lead 1?&quot;" newline="True"/>
+            <input variable="orc1"/>
+            <output expression="&quot;Qual o or&#231;amento do lead 2?&quot;" newline="True"/>
+            <input variable="orc2"/>
+            <if expression="orc1 == orc2">
+                <then>
+                    <output expression="&quot;Os leads t&#234;m o mesmo or&#231;amento&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="orc1 &gt; orc2">
+                        <then>
+                            <output expression="&quot;O lead 1 tem maior or&#231;amento&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;O lead 2 tem maior or&#231;amento&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

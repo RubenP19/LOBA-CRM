@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="01_3.3_desconto por escal&#227;o"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 11:55:46 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjEwOjM4OjIxICI7Mjc2NQ=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjExOjU1OjQ2ICI7MjsyODgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="compra, desconto, final" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual a o valor da compra?&quot;" newline="True"/>
+            <input variable="compra"/>
+            <if expression="compra &gt; 200">
+                <then>
+                    <assign variable="desconto" expression="0.2"/>
+                </then>
+                <else>
+                    <if expression="compra &gt; 100">
+                        <then>
+                            <assign variable="desconto" expression="0.1"/>
+                        </then>
+                        <else>
+                            <assign variable="desconto" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="final" expression="compra * (1 - desconto)"/>
+            <output expression="&quot;O valor do desconto &#233; &quot; &amp; desconto &amp; &quot; e o valor final a pagar &#233; &quot; &amp; final &amp; &quot; euros.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

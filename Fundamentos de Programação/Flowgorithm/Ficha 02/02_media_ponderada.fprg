@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="02_media_ponderada"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 02:34:29 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjI5OjU4ICI7Mjc3Ng=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjM0OjI5ICI7MTsyODc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ava1, ava2, media" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o valor da primeira avalia&#231;&#227;o?&quot;" newline="True"/>
+            <input variable="ava1"/>
+            <output expression="&quot;Qual o valor da segunda avalia&#231;&#227;o?&quot;" newline="True"/>
+            <input variable="ava2"/>
+            <assign variable="media" expression="(ava1*0.4)+(ava2*0.6)"/>
+            <output expression="&quot;A m&#233;dia ponderada das avalia&#231;&#245;es &#233; de &quot; &amp; media&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

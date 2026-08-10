@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="06_elegivel_deconto"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 03:06:20 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjUyOjUwICI7Mjc2NA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAzOjA2OjIwICI7MjsyODcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cliente" type="Boolean" array="False" size=""/>
+            <declare name="valor" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o valor da compra?&quot;" newline="True"/>
+            <input variable="valor"/>
+            <output expression="&quot;O cliente &#233; antigo.(true/false)&quot;" newline="True"/>
+            <input variable="cliente"/>
+            <if expression="valor &gt; 100 AND cliente = true">
+                <then>
+                    <output expression="&quot;O cliente tem desconto.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O cliente n&#227;o tem desconto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

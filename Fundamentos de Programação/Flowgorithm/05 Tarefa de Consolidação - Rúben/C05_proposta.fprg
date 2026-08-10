@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="C05_proposta"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 04:36:36 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjA0OjExOjU2ICI7Mjc2Nw=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjA0OjM2OjM2ICI7MTsyODgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="preco, num, iva, desc, subtotal, total, totaliva" type="Real" array="False" size=""/>
+            <declare name="regiao" type="String" array="False" size=""/>
+            <output expression="&quot;Qual &#233; o pre&#231;o unit&#225;rio?&quot;" newline="True"/>
+            <input variable="preco"/>
+            <output expression="&quot;Qual o n&#250;mero de unidades adquiridas?&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="subtotal" expression="preco * num"/>
+            <output expression="&quot;Qual a regi&#227;o do Cliente?&quot;" newline="True"/>
+            <input variable="regiao"/>
+            <if expression="regiao = &quot;Norte&quot; OR regiao = &quot;Centro&quot;">
+                <then>
+                    <assign variable="desc" expression="0.05"/>
+                </then>
+                <else>
+                    <assign variable="desc" expression="0"/>
+                </else>
+            </if>
+            <assign variable="total" expression="subtotal - (subtotal*desc)"/>
+            <assign variable="iva" expression="0.23"/>
+            <assign variable="totaliva" expression="total + (total*iva)"/>
+            <output expression="&quot;Total final: &quot; &amp;totaliva&amp; &quot;&#8364;&quot;" newline="True"/>
+            <output expression="&quot;Desconto aplicado: &quot; &amp;desc*100&amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;IVA: &quot; &amp;iva*100&amp; &quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

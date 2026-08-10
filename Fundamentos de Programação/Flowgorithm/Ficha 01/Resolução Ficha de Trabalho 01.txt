@@ -1,0 +1,37 @@
+Resolução Ficha de Trabalho 01
+
+1.1 Valor
+
+1. Ler preço unitário
+2. Ler nº de unidades
+3. Ler o desconto (0-1)
+4. Calcular valor: preço * unidade * desconto (1-desconto)
+5. Apresentar o valor da oportunidade
+6. Terminar
+
+1.2 Média 
+
+1. Ler avaliação de satisfação 1 (0-10)
+2. Ler avaliação de satisfação 2 (0-10)
+3 Calcular média: (avaliação 1 + avaliação 2)/2 
+(ou 3.1 Somar as duas avaliações e 3.2 Dividir a soma por 2 para obter a média)
+4 Apresentar média de satisfação
+5 Terminar 
+
+*Em linguagem natural escrever sempre a leitura dos vários valores. Também não precisamos de declarar variável
+
+1.3 Qualificar Lead
+
+1. Ler orçamento de lead
+2. Ler orçamento mínimo aceitável 
+3 Comparar os dois valores:
+	-Se orçamento > ou = a mínimo, é "Lead prioritário"					-Caso contrário, "Lead para acompanhar"
+4.Terminar
+
+1.4
+
+1. Ler valor total de negócio
+2. Ler nº de unidades vendidas
+3. Calcular receita por unidade: valor total de negócio/nº de unidades vendidas
+4. Apresentar a receita por unidade 
+5. Terminar

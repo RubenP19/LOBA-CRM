@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Exercicio1.8_FP_LOBA"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-04 03:43:53 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMDQ7IjAzOjMzOjEyICI7Mjc2NQ=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMDQ7IjAzOjQzOjUzICI7MTsyODc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="user, pass, userTry, passTry" type="String" array="False" size=""/>
+            <assign variable="user" expression="&quot;admin&quot;"/>
+            <assign variable="pass" expression="&quot;1234&quot;"/>
+            <output expression="&quot;Introduza o nome do utilizador: &quot;" newline="True"/>
+            <input variable="userTry"/>
+            <output expression="&quot;Introduza a palavra-passe: &quot;" newline="True"/>
+            <input variable="passTry"/>
+            <if expression="userTry == user &amp;&amp; passTry == pass">
+                <then>
+                    <output expression="&quot;Login com sucesso&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Tenta Novamente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

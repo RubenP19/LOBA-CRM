@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="01_iva"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-10 02:29:54 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjIxOjQzICI7Mjc2Mg=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTA7IjAyOjI5OjU0ICI7MTsyODgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, iva, total" type="Real" array="False" size=""/>
+            <output expression="&quot;Qual o pre&#231;o sem IVA?&quot;" newline="True"/>
+            <input variable="valor"/>
+            <output expression="&quot;Qual o IVA desta compra? (0-1)&quot;" newline="True"/>
+            <input variable="iva"/>
+            <assign variable="total" expression="valor + (valor * IVA)"/>
+            <output expression="&quot;O valor total &#233; &quot; &amp; total &amp; &quot; euros. O IVA deste produto &#233; de &quot; &amp; iva *100 &amp; &quot;%.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
