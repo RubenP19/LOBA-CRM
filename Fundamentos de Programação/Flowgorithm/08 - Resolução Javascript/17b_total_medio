@@ -1,0 +1,22 @@
+//Resolução do exercício do slide 17 B 
+
+// Array com valores de orçamentos
+const orcamentos = [12000, 5000, 8000, 20000, 3000];
+
+//acumular total com inicialização 0 
+
+let total = 0;
+
+//ciclo for para percorrer o array e acumular o valor do orçamento ao total
+
+for(i=0; i < orcamentos.length; i++){
+    //adiciona o valor atual ao total
+    total = total + orcamentos[i];
+}
+
+//calcula a média dividindo o total pelo número de elementos no array
+const media = total / orcamentos.length;
+
+//apresenta o total e a média no console
+console.log("Total dos orçamentos: " + total);
+console.log("Média dos orçamentos: " + media);

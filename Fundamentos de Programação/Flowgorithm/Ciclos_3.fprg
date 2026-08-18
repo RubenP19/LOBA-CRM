@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ciclos_3"/>
+        <attribute name="authors" value="cesae"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-18 11:56:32 "/>
+        <attribute name="created" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTg7IjExOjI2OjAwICI7Mjc2OA=="/>
+        <attribute name="edited" value="Y2VzYWU7REVTS1RPUC1KUzVNSEM2OzIwMjYtMDgtMTg7IjExOjU2OjMyICI7MTsyODg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, pMaior" type="Integer" array="False" size=""/>
+            <declare name="nome" type="String" array="True" size="5"/>
+            <declare name="orc" type="Real" array="True" size="5"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Nome &quot; &amp; i+1 &amp; &quot;:&quot;" newline="True"/>
+                <input variable="nome[i]"/>
+                <while expression="nome[i] == &quot;&quot;">
+                    <output expression="&quot;Nome inv&#225;lido (campo vazio). Nome &quot; &amp; i+1 &amp; &quot;:&quot;" newline="True"/>
+                    <input variable="nome[i]"/>
+                </while>
+                <output expression="&quot;Or&#231;amento da empresa &quot; &amp; nome[i] &amp; &quot;:&quot;" newline="True"/>
+                <input variable="orc[i]"/>
+                <while expression="orc[i] &lt;= 0">
+                    <output expression="&quot;Or&#231;amento inv&#225;lido. Or&#231;amento &quot; &amp; i+1 &amp; &quot;:&quot;" newline="True"/>
+                    <input variable="orc[i]"/>
+                </while>
+            </for>
+            <assign variable="pMaior" expression="0"/>
+            <for variable="i" start="1" end="4" direction="inc" step="1">
+                <if expression="orc[i] &gt; orc [pMaior]">
+                    <then>
+                        <assign variable="pMaior" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;A empresa com maior or&#231;amento &#233;: &quot; &amp; nome[pMaior]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
