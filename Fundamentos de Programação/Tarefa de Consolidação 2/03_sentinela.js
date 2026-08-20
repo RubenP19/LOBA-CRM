@@ -1,0 +1,1 @@
+//Pedir orçamento das leads (à vez) até escrever "Fim". Nesse momento calcular total e média
