@@ -3,7 +3,22 @@
 let orc = [12000, 5000, 8000, 20000, 3000];
 let interesses = ['alto', 'medio', 'alto', 'baixo', 'medio'];
 
-for (let i = 0; i < orc.length; i++) {
-    let qualificacao = qualificarLead(orc[i], interesses[i]);
-    console.log(`Lead ${i + 1}: Orçamento = ${orc[i]}, Interesse = ${interesses[i]}, Qualificação = ${qualificacao}`);
+function qualificarLead(orc, interesse) {
+    const qualificarLead = [];
 }
+for (let i = 0; i < orc.length; i++) {
+    if (orc[i] >= 10000 && qualificarLead[i] === 'alto') {
+        qualificarLead[i] = 'Quente';
+    } else if (orc[i] >= 5000) {
+        qualificarLead[i] = 'Morno';
+    } return "Frio"; 
+}
+
+
+// Chamar função qualificarLead para cada lead
+
+
+//Mostrar a qualificação de cada lead
+
+
+// Contar quantas leads ficaram quentes
