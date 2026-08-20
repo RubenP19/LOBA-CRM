@@ -6,3 +6,6 @@ function valorComIVA (preco){
 
 console.log(valorComIVA(100));
 console.log(valorComIVA(200));
+
+
+

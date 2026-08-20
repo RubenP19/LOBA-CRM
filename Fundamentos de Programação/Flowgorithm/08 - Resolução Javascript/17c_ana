@@ -1,0 +1,47 @@
+// Resolução do exercicio do slide 17 C
+
+const prompt = require('prompt-sync')();
+
+//função classifica um lead em função do orçamento e interesse
+function qualificarlead(orc, interesse){
+    if (orc >= 10000 && interesse == "alto")
+        return "Quente";
+    else if (orc >= 5000) 
+        return "Morno";
+    else
+        return "Frio";
+}
+
+//pedir o numero de leads a analisar
+const numLeads = parseInt(prompt("Quantos leads deseja analisar? "));
+
+//arrays vazios para armazenar dados
+
+const orcamento = [];
+const interesses = [];
+
+for (let i=0; i < numLeads; i++){
+    //orçamento do lead
+    const orc = parseInt(prompt("Lead " + (i + 1) + " Orçamento: "));
+
+    //nivel de interesse do lead
+    const interesse = prompt("Lead " + (i + 1) + " Interesse: ");
+
+    //Adiciona os valores aos arrays
+    orcamento.push(orc);
+    interesses.push(interesse);
+
+}
+
+//contador para armazenar o número de leads classificados como quentes
+let quentes = 0;
+
+for (i = 0; i < numLeads; i++){
+    const prioridade = qualificarlead(orcamento[i], interesses[i]);
+
+    console.log("Lead " + (i + 1) + ": " + prioridade);
+
+    if (prioridade == "Quente") quentes += 1;
+}
+
+console.log ("Temos " +quentes+ " leads quentes.");
