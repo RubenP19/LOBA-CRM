@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedido de Suporte</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+
+            color: #29251f;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #f4d58d 0%,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #3d3020 0%,
+                    #72501f 45%,
+                    #a66d1f 100%
+                );
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .form-card {
+            background: #fffdf8;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 42px;
+
+            box-shadow:
+                0 30px 70px rgba(0, 0, 0, 0.28),
+                0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-icon {
+            width: 62px;
+            height: 62px;
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: linear-gradient(
+                135deg,
+                #c48a2c,
+                #e1b65c
+            );
+
+            color: #fffaf0;
+            font-size: 28px;
+
+            box-shadow:
+                0 10px 25px rgba(166, 109, 31, 0.30);
+        }
+
+        .form-header h1 {
+            margin: 0 0 10px;
+
+            color: #332719;
+
+            font-size: 30px;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+        }
+
+        .form-header p {
+            margin: 0;
+
+            color: #81745f;
+
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .field label {
+            margin-bottom: 8px;
+
+            color: #51432f;
+
+            font-size: 14px;
+            font-weight: 650;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+
+            border: 1px solid #dfd2bb;
+            border-radius: 12px;
+
+            background: #faf7f0;
+            color: #332719;
+
+            font-family: inherit;
+            font-size: 15px;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .field input,
+        .field select {
+            height: 50px;
+            padding: 0 15px;
+        }
+
+        .field textarea {
+            min-height: 140px;
+            padding: 14px 15px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: #aa9d88;
+        }
+
+        .field input:hover,
+        .field select:hover,
+        .field textarea:hover {
+            border-color: #cda65b;
+            background: #fffdf9;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: #b67a1f;
+            background: #ffffff;
+
+            box-shadow:
+                0 0 0 4px rgba(182, 122, 31, 0.12);
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 55px;
+
+            margin-top: 28px;
+
+            border: none;
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #a96d1c,
+                    #d09a3c
+                );
+
+            color: #fffdf7;
+
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px rgba(166, 109, 31, 0.30);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                filter 0.2s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+
+            filter: brightness(1.05);
+
+            box-shadow:
+                0 14px 30px rgba(166, 109, 31, 0.38);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .privacy-note {
+            margin-top: 18px;
+
+            text-align: center;
+
+            color: #a19480;
+
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+                align-items: flex-start;
+            }
+
+            .form-card {
+                margin-top: 10px;
+                padding: 28px 20px;
+                border-radius: 20px;
+            }
+
+            .form-header h1 {
+                font-size: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+    <form
+        class="form-card"
+        action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Daj0000129mlJ"
+        method="POST"
+    >
+
+        <!-- Salesforce -->
+        <input type="hidden" name="orgid" value="00Daj0000129mlJ">
+
+        <!--
+            IMPORTANTE:
+            Substitui este endereço pela tua página real
+            de confirmação após o envio.
+        -->
+        <input
+            type="hidden"
+            name="retURL"
+            value="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        >
+
+        <div class="form-header">
+
+            <div class="form-icon">
+                ✓
+            </div>
+
+            <h1>Pedido de Suporte</h1>
+
+            <p>
+                Preencha os dados abaixo e descreva o problema.
+                A nossa equipa irá analisar o seu pedido.
+            </p>
+
+        </div>
+
+        <div class="form-grid">
+
+            <!-- Nome -->
+            <div class="field">
+                <label for="name">
+                    Nome
+                </label>
+
+                <input
+                    id="name"
+                    maxlength="80"
+                    name="name"
+                    type="text"
+                    placeholder="O seu nome"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+
+            <!-- Email -->
+            <div class="field">
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    maxlength="80"
+                    name="email"
+                    type="email"
+                    placeholder="nome@empresa.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+
+            <!-- Telefone -->
+            <div class="field">
+                <label for="phone">
+                    Telefone
+                </label>
+
+                <input
+                    id="phone"
+                    maxlength="40"
+                    name="phone"
+                    type="tel"
+                    placeholder="+351 900 000 000"
+                    autocomplete="tel"
+                >
+            </div>
+
+
+            <!-- Assunto -->
+            <div class="field">
+                <label for="subject">
+                    Assunto
+                </label>
+
+                <input
+                    id="subject"
+                    maxlength="80"
+                    name="subject"
+                    type="text"
+                    placeholder="Qual é o assunto?"
+                    required
+                >
+            </div>
+
+
+            <!-- Motivo -->
+            <div class="field full">
+                <label for="reason">
+                    Motivo do pedido
+                </label>
+
+                <select
+                    id="reason"
+                    name="reason"
+                    required
+                >
+                    <option value="">
+                        Selecione uma opção
+                    </option>
+
+                    <option value="Installation">
+                        Instalação
+                    </option>
+
+                    <option value="Equipment Complexity">
+                        Complexidade do equipamento
+                    </option>
+
+                    <option value="Performance">
+                        Desempenho
+                    </option>
+
+                    <option value="Breakdown">
+                        Avaria
+                    </option>
+
+                    <option value="Equipment Design">
+                        Design do equipamento
+                    </option>
+
+                    <option value="Feedback">
+                        Feedback
+                    </option>
+
+                    <option value="Other">
+                        Outro
+                    </option>
+                </select>
+            </div>
+
+
+            <!-- Descrição -->
+            <div class="field full">
+                <label for="description">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Descreva o problema ou pedido com o máximo de detalhe possível..."
+                    required
+                ></textarea>
+            </div>
+
+        </div>
+
+
+        <!-- Botão -->
+        <button
+            type="submit"
+            name="submit"
+            class="submit-button"
+        >
+            Enviar pedido →
+        </button>
+
+
+        <div class="privacy-note">
+            Os seus dados serão utilizados apenas para tratar
+            o seu pedido de suporte.
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

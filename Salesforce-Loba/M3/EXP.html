@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacte-nos</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background:
+                linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 15px;
+            color: #0f172a;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            padding: 42px;
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.25),
+                0 8px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 18px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 26px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.30);
+        }
+
+        .form-header h1 {
+            margin: 0 0 10px;
+            font-size: 30px;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+            color: #111827;
+        }
+
+        .form-header p {
+            margin: 0;
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .field label {
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 650;
+            color: #334155;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+            border: 1px solid #dbe3ef;
+            border-radius: 12px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .field input::placeholder {
+            color: #94a3b8;
+        }
+
+        .field input:hover,
+        .field select:hover {
+            border-color: #93c5fd;
+            background: #fff;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: #2563eb;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 54px;
+            margin-top: 28px;
+            border: none;
+            border-radius: 13px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.28);
+            transition: all 0.2s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .privacy-note {
+            margin-top: 18px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+                align-items: flex-start;
+            }
+
+            .form-card {
+                margin-top: 10px;
+                padding: 28px 20px;
+                border-radius: 20px;
+            }
+
+            .form-header h1 {
+                font-size: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+    <form
+        class="form-card"
+        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Daj0000129mlJ"
+        method="POST"
+    >
+
+        <input type="hidden" name="oid" value="00Daj0000129mlJ">
+        <input type="hidden" name="retURL" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <input type="hidden" name="lead_source" value="Web">
+
+        <div class="form-header">
+            <div class="form-icon">✦</div>
+
+            <h1>Entre em contacto</h1>
+
+            <p>
+                Preencha os seus dados e entraremos em contacto consigo
+                brevemente.
+            </p>
+        </div>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="first_name">Nome</label>
+                <input
+                    id="first_name"
+                    maxlength="40"
+                    name="first_name"
+                    type="text"
+                    placeholder="O seu nome"
+                    autocomplete="given-name"
+                >
+            </div>
+
+            <div class="field">
+                <label for="last_name">Apelido</label>
+                <input
+                    id="last_name"
+                    maxlength="80"
+                    name="last_name"
+                    type="text"
+                    placeholder="O seu apelido"
+                    autocomplete="family-name"
+                >
+            </div>
+
+            <div class="field full">
+                <label for="email">Email</label>
+                <input
+                    id="email"
+                    maxlength="80"
+                    name="email"
+                    type="email"
+                    placeholder="nome@empresa.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="company">Empresa</label>
+                <input
+                    id="company"
+                    maxlength="40"
+                    name="company"
+                    type="text"
+                    placeholder="Nome da empresa"
+                    autocomplete="organization"
+                >
+            </div>
+
+            <div class="field">
+                <label for="mobile">Telemóvel</label>
+                <input
+                    id="mobile"
+                    maxlength="40"
+                    name="mobile"
+                    type="tel"
+                    placeholder="+351 900 000 000"
+                    autocomplete="tel"
+                >
+            </div>
+
+            <div class="field">
+                <label for="city">Cidade</label>
+                <input
+                    id="city"
+                    maxlength="40"
+                    name="city"
+                    type="text"
+                    placeholder="A sua cidade"
+                    autocomplete="address-level2"
+                >
+            </div>
+
+            <div class="field">
+                <label for="country_code">País</label>
+
+                <select id="country_code" name="country_code">
+                    <option value="">Selecione o país</option>
+                    <option value="PT">Portugal</option>
+                    <option value="ES">Espanha</option>
+                    <option value="FR">França</option>
+                    <option value="GB">Reino Unido</option>
+                    <option value="DE">Alemanha</option>
+                    <option value="IT">Itália</option>
+                    <option value="BR">Brasil</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="AO">Angola</option>
+                    <option value="MZ">Moçambique</option>
+                    <option value="CV">Cabo Verde</option>
+                    <option value="CH">Suíça</option>
+                    <option value="NL">Países Baixos</option>
+                    <option value="BE">Bélgica</option>
+                    <option value="IE">Irlanda</option>
+                    <option value="AT">Áustria</option>
+                    <option value="CA">Canadá</option>
+                    <option value="OTHER">Outro</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit" name="submit" class="submit-button">
+            Enviar pedido →
+        </button>
+
+        <div class="privacy-note">
+            Os seus dados serão utilizados apenas para responder ao seu pedido.
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+1. Um algoritmo é um conjunto de linhas de código para que atuam para uma determinada finalidade? Um exemplo seria a publicidade ou publicações sugeridas nas redes sociais, que dependendo das nossas ações (clicks, tempo de visualização, scroll etc) nos recomendam aquilo que nos pode chamar mais à atenção e aumentar a utilização das redes.
+
+2. Espero que dê algo como erro ou null, uma vez que as "" fazem com que o 3 esteja em formato de texto em vez de formato numérico 
+
+3. Pela quantidade de compras que faz. De forma a recompensar a fidelização à marca, atribuímos o desconto. Também poderemos fazer alguma promoção caso o cliente fosse habitual, mas não tenha feito compras recentemente (ex. Uber/Bolt)
+
+4. Tentando agrupar os clientes através de algum campo em comum e fazendo a operação para todos os clientes que cumprissem esse requisito. 
+
+5. Nunca utilizei
+
+6. Grito…Falando a sério, na pouca experiência que tenho tento verificar onde está o erro. Leio a mensagem (em SQL por exemplo, está escrito qual o problema) ou então tento entender se a sintaxe do que estava a escrever e fazer a alteração necessária. Como geralmente é em coisas simples, posso também pedir ajuda a algum chatbot de modo a identificar o problema.
